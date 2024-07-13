@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-pms-nginx
+  namespace: nginx-ingress
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8093
+      targetPort: 8093
+  selector:
+    app: pms
+
