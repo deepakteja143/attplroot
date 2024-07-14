@@ -1,0 +1,91 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: attpld-ingress
+  namespace: nginx-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/use-regex: "true"
+spec:
+  rules:
+  - host: backend.attplems.com
+    http:
+      paths:
+      - path: /ams
+        pathType: Prefix
+        backend:
+          service:
+            name: service-ams
+            port:
+              number: 8091
+      - path: /bms
+        pathType: Prefix
+        backend:
+          service:
+            name: service-bms
+            port:
+              number: 8089
+      - path: /cms
+        pathType: Prefix
+        backend:
+          service:
+            name: service-cms
+            port:
+              number: 8082
+      - path: /ems
+        pathType: Prefix
+        backend:
+          service:
+            name: service-ems
+            port:
+              number: 8080
+      - path: /exms
+        pathType: Prefix
+        backend:
+          service:
+            name: service-exms
+            port:
+              number: 8081
+      - path: /otp
+        pathType: Prefix
+        backend:
+          service:
+            name: service-otp
+            port:
+              number: 8085
+      - path: /pms
+        pathType: Prefix
+        backend:
+          service:
+            name: service-pms
+            port:
+              number: 8093
+      - path: /sms
+        pathType: Prefix
+        backend:
+          service:
+            name: service-sms
+            port:
+              number: 8094
+      - path: /tms
+        pathType: Prefix
+        backend:
+          service:
+            name: service-tms
+            port:
+              number: 8086
+      - path: /ums
+        pathType: Prefix
+        backend:
+          service:
+            name: service-ums
+            port:
+              number: 8083
+      - path: /vms
+        pathType: Prefix
+        backend:
+          service:
+            name: service-vms
+            port:
+              number: 8088
+

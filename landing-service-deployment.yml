@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: landing-service
+  namespace: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: landing-service
+  template:
+    metadata:
+      labels:
+        app: landing-service
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
+      containers:
+        - name: landing-service
+          image: attplattpl1/landing-service-dev:1.0.0
+          ports:
+            - containerPort: 80
+

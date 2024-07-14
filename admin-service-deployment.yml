@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin-service
+  namespace: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: admin-service
+  template:
+    metadata:
+      labels:
+        app: admin-service
+    spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
+      containers:
+        - name: admin-service
+          image: attplattpl1/admin-service-dev:1.0.0
+          ports:
+            - containerPort: 80
+

@@ -1,0 +1,82 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backend-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: test.attplems.com
+    http:
+      paths:
+      - path: /ams-service
+        pathType: Prefix
+        backend:
+          service:
+            name: ams-service
+            port:
+              number: 8011			  
+      - path: /bms-service
+        pathType: Prefix
+        backend:
+          service:
+            name: bms-service
+            port:
+              number: 8009	  
+      - path: /contact-management-service-dev
+        pathType: Prefix
+        backend:
+          service:
+            name: contact-management-service-dev
+            port:
+              number: 8082	  
+      - path: /exms-service
+        pathType: Prefix
+        backend:
+          service:
+            name: exms-service
+            port:
+              number: 8001 
+      - path: /otp-service
+        pathType: Prefix
+        backend:
+          service:
+            name: otp-service
+            port:
+              number: 80 
+      - path: /pms-service
+        pathType: Prefix
+        backend:
+          service:
+            name: pms-service
+            port:
+              number: 8013	  
+      - path: /support-management-service-dev
+        pathType: Prefix
+        backend:
+          service:
+            name: support-management-service-dev
+            port:
+              number: 8015
+      - path: /tms-service
+        pathType: Prefix
+        backend:
+          service:
+            name: tms-service
+            port:
+              number: 8006
+      - path: /vms-service
+        pathType: Prefix
+        backend:
+          service:
+            name: vms-service
+            port:
+              number: 8008
+      - path: /ums-service
+        pathType: Prefix
+        backend:
+          service:
+            name: ums-service
+            port:
+              number: 8005
