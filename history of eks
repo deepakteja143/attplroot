@@ -1,0 +1,1001 @@
+ 1000  kubectl apply -f exms-ingress.yml
+ 1001  kubectl get svc -l app.kubernetes.io/name=ingress-nginx -n nginx-ingress
+ 1002  nslookup a56a2e9375e80447bad214524cbfb12f-2053738155.ap-south-1.elb.amazonaws.com
+ 1003  cd attpl-root/deployments/
+ 1004  ll
+ 1005  history
+ 1006  dig ums.backend.attplems.com
+ 1007  cd attpl-root/deployments/
+ 1008  ll
+ 1009  cd admin-landing/
+ 1010  ll
+ 1011  vi  backend-ingress.yml
+ 1012  kubectl apply -f  backend-ingress.yml
+ 1013  history
+ 1014  kubectl get deployments
+ 1015  kubectl get services
+ 1016  kubectl get pods
+ 1017  kubectl get namespaces
+ 1018  kubectl get deployments -n dev
+ 1019  kubectl get services -n dev
+ 1020  cd attpl-root/deployments/
+ 1021  kubectl get deployments
+ 1022  kubectl get services
+ 1023  cd attpl-root/deployments/
+ 1024  kubectl get deployments
+ 1025  kubectl get services
+ 1026  kubectl get pods
+ 1027  kubectl get services
+ 1028  cd attpl-root/deployments/
+ 1029  kubectl get services
+ 1030  kubectl get deployments
+ 1031  kubectl get namespaces
+ 1032  vi attplems-ingress.yml
+ 1033  kubectl apply -f attplems-ingress.yaml
+ 1034  kubectl apply -f attplems-ingress.yml
+ 1035  cd admin-landing/
+ 1036  kubectl get services
+ 1037  kubectl get services -n dev
+ 1038  kubectl get ingress -n default
+ 1039  kubectl get ingress
+ 1040  ll
+ 1041  cd ..
+ 1042  ll
+ 1043  vi attplems-ingress.yml
+ 1044  kubectl apply -f attplems-ingress.yml
+ 1045  vi attplems-ingess.yml
+ 1046  ll
+ 1047  vi attplems-ingress.yml 
+ 1048  kubectl apply -f attplems-ingress.yml 
+ 1049  kubectl get ingress attplems-ingress -n nginx-ingress
+ 1050  kubectl describe ingress attplems-ingress -n nginx-ingress
+ 1051  ubuntu@ip-172-31-11-204:~/attpl-root/deployments$ kubectl get ingress attplems-ingress -n nginx-ingress
+ 1052  NAME               CLASS    HOSTS                     ADDRESS   PORTS   AGE
+ 1053  attplems-ingress   <none>   www.eksdev.attplems.com             80      95m
+ 1054  ubuntu@ip-172-31-11-204:~/attpl-root/deployments$ kubectl describe ingress attplems-ingress -n nginx-ingress
+ 1055  Name:             attplems-ingress
+ 1056  Labels:           <none>
+ 1057  Namespace:        nginx-ingress
+ 1058  Address:          
+ 1059  Ingress Class:    <none>
+ 1060  Default backend:  <default>
+ 1061  Rules:
+ 1062  Annotations:               nginx.ingress.kubernetes.io/rewrite-target: /$1
+ 1063  Events:                    <none>
+ 1064  clear
+ 1065  kubectl get services -A
+ 1066  vi attplems-ingress.yml 
+ 1067  kubectl apply -f attplems-ingress.yml
+ 1068  kubectl get ingress attplems-ingress -n nginx-ingress
+ 1069  kubectl describe ingress attplems-ingress -n nginx-ingress
+ 1070  vi attplems-ingress.yml 
+ 1071  kubectl apply -f attplems-ingress.yml
+ 1072  vi attplems-ingress.yml 
+ 1073  cd attpl-root/deployments/
+ 1074  apiVersion: networking.k8s.io/v1
+ 1075  kind: Ingress
+ 1076  metadata:
+ 1077  spec:
+ 1078  vi attplems-ingress.yml 
+ 1079  kubectl apply -f attplems-ingress.yml
+ 1080  vi attplems-ingress.yml 
+ 1081  kubectl apply -f attplems-ingress.yml
+ 1082  kubectl get ingress attplems-ingress -n nginx-ingress
+ 1083  cd attpl-root/deployments/admin-landing/
+ 1084  ll
+ 1085  cd ..
+ 1086  kubectl describe ingress attplems-ingress -n nginx-ingress
+ 1087  kubectl get pods -n nginx-ingress
+ 1088  kubectl get services -n nginx-ingress
+ 1089  kubectl logs -l app.kubernetes.io/name=ingress-nginx -n nginx-ingress
+ 1090  kubectl logs -1 app.kubernetes.io/name=ingress-nginx -n nginx-ingress
+ 1091  kubectl logs -l app.kubernetes.io/name=ingress-nginx -n nginx-ingress
+ 1092  vi attplems-ingress.yml 
+ 1093  kubectl apply -f attplems-ingress.yml
+ 1094  vi attplems-ingress.yml 
+ 1095  kubectl apply -f attplems-ingress.yml
+ 1096  kubectl logs -l app.kubernetes.io/name=ingress-nginx -n nginx-ingress
+ 1097  kubectl get ingressclass
+ 1098  vi attplems-ingress.yml 
+ 1099  kubectl apply -f attplems-ingress.yml
+ 1100  kubectl describe ingress backend-ingress -n nginx-ingress
+ 1101  kubectl get endpoints -n nginx-ingress
+ 1102  cd attpl-root/deployments/
+ 1103  kubectl get svc -n nginx-ingress
+ 1104  cd admin-landing/
+ 1105  kubectl get services
+ 1106  ll
+ 1107  vi backend-ingress.yml 
+ 1108  vi attpld-ingress.yml 
+ 1109  cd ..
+ 1110  ll
+ 1111  kubectl get services
+ 1112  kubectl get deployments
+ 1113  kubectl get services
+ 1114  cd admin-landing/
+ 1115  mkdir nginx-ingress-services
+ 1116  cd nginx-ingress-services/
+ 1117  ll
+ 1118  ls
+ 1119  vi service-ams-nginx.yml
+ 1120  vi service-bms-nginx.yml
+ 1121  vi service-cms-nginx.yml
+ 1122  vi service-ems-nginx.yml
+ 1123  vi service-exms-nginx.yml
+ 1124  vi service-otp-nginx.yml
+ 1125  vi service-pms-nginx.yml
+ 1126  vi service-sms-nginx.yml
+ 1127  vi service-tms-nginx.yml
+ 1128  vi service-ums-nginx.yml
+ 1129  vi service-vms-nginx.yml
+ 1130  cd ~/attpl-root/deployments/nginx-ingress-services
+ 1131  kubectl apply -f service-ams-nginx.yml
+ 1132  kubectl apply -f service-bms-nginx.yml
+ 1133  kubectl apply -f service-cms-nginx.yml
+ 1134  kubectl apply -f service-ems-nginx.yml
+ 1135  kubectl apply -f service-exms-nginx.yml
+ 1136  kubectl apply -f service-otp-nginx.yml
+ 1137  kubectl apply -f service-pms-nginx.yml
+ 1138  kubectl apply -f service-sms-nginx.yml
+ 1139  kubectl apply -f service-tms-nginx.yml
+ 1140  kubectl apply -f service-ums-nginx.yml
+ 1141  kubectl apply -f service-vms-nginx.yml
+ 1142  ll
+ 1143  cd attpl-root/
+ 1144  cd deployments/
+ 1145  ll
+ 1146  vi attplems-ingress.yml
+ 1147  kubectl get services
+ 1148  history
+ 1149  cd admin-landing/
+ 1150  cd nginx-ingress-services/
+ 1151  ll
+ 1152  vi service-ams-nginx.yml 
+ 1153  kubectl get ingress attplems-ingress -n nginx-ingress
+ 1154  history
+ 1155  kubectl get svc -n nginx-ingress
+ 1156  ll
+ 1157  cd ..
+ 1158  ll
+ 1159  vi attpld-ingress.yml
+ 1160  vi backend-ingress.yml 
+ 1161  kubectl logs -l app.kubernetes.io/name=ingress-nginx -n nginx-ingress
+ 1162  cd nginx-ingress-services/
+ 1163  kubectl get svc --all-namespace -o wide
+ 1164  kubectl get svc --all-namespaces -o wide
+ 1165  kubectl get svc --all-namespaces -o wide | grep LoadBalancer
+ 1166  kubectl delete service cms-service
+ 1167  kubectl get services
+ 1168  history
+ 1169  vi attpld-ingress.yml
+ 1170  cd attpl-root/deployments/admin-landing/nginx-ingress-services/
+ 1171  kubectl get services
+ 1172  cd -
+ 1173  mkdir manager
+ 1174  cd manager/
+ 1175  ll
+ 1176  vi attpl-ems-test-server.yml
+ 1177  rm -rf attpl-ems-test-server.yml 
+ 1178  ll
+ 1179  vi attpl-ems-test-server-deployment.yml
+ 1180  cd -
+ 1181  ll
+ 1182  cd ums
+ 1183  ll
+ 1184  cd -
+ 1185  vi .config/
+ 1186  cd .docker/
+ 1187  cd -
+ 1188  vi .docker/
+ 1189  cd attpl-root/deployments/admin-landing/nginx-ingress-services/
+ 1190  kubectl get pods
+ 1191  kubectl logs bms-deployment-76bb76fbc6-52thg 
+ 1192  kubectl get deployments
+ 1193  kubectl get pods
+ 1194  kubectl get logs cms-deployment-9f7877f5f-45hjp 
+ 1195  kubectl get logs deployment-ams-6ff885d5cb-trr27 
+ 1196  kubectl get logs deployment-vms-67cb4ccd99-ppvwh
+ 1197  kubectl get logs ems-deployment-6976674cd6-wghv5  
+ 1198  cd attpl-root/deployments/admin-landing/nginx-ingress-services/
+ 1199  kubectl get pods
+ 1200  kubectl get logs
+ 1201  kubectl logs bms-deployment-76bb76fbc6-52thg 
+ 1202  kubectl get pods
+ 1203  kubectl logs cms-deployment-9f7877f5f-45hjp
+ 1204  kubectl get pods
+ 1205  kubectl logs deployment-ams-6ff885d5cb-trr27
+ 1206  kubectl logs deployment-vms-67cb4ccd99-ppvwh
+ 1207  kubectl get pods
+ 1208  kubectl logs ems-deployment-6976674cd6-wghv5 
+ 1209  kubectl get podss
+ 1210  kubectl get pods
+ 1211  kubectl logs -f ems-deployment-6976674cd6-wghv5 
+ 1212  kubectl get pods
+ 1213  kubectl logs exms-deployment-7865dcc9b7-mjlpg
+ 1214  kubectl get pods
+ 1215  kubectl logs otp-deployment-b644ff55f-7z42x 
+ 1216  kubectl get pods
+ 1217  kubectl logs pms-deployment-7b595c8bf4-7mstx
+ 1218  kubectl get pods
+ 1219  kubectl logs otp-deployment-b644ff55f-7z42x
+ 1220  kubectl get pods
+ 1221  kubectl logs exms-deployment-7865dcc9b7-mjlpg
+ 1222  kubectl get deployments -n dev
+ 1223  kubectl get services
+ 1224  ccd ..
+ 1225  cd ..
+ 1226  ll
+ 1227  vi landing-service-deployment.yml 
+ 1228  kubectl get services -n dev
+ 1229  kubectl get pods
+ 1230  kubectl logs pms-deployment-7b595c8bf4-7mstx 
+ 1231  kubectl get pods
+ 1232  kubectl logs sms-deployment-85c4455955-vzmjl 
+ 1233  kubectl get pods
+ 1234  kubectl logs sms-deployment-85c4455955-vzmjl 
+ 1235  kubectl get pods
+ 1236  kubectl logs sms-deployment-85c4455955-vzmjl  
+ 1237  kubectl get pods
+ 1238  kubectl logs tms-deployment-6574c58468-496jq  
+ 1239  kubectl get pods 
+ 1240  kubectl logs tms-deployment-6574c58468-kb6ss  
+ 1241  kubectl get pods
+ 1242  kubectl logs ums-deployment-869c97998b-9zbxd
+ 1243  kubectl get pods
+ 1244  kubectl logs cms-deployment-9f7877f5f-45hjp 
+ 1245  kubectl get pods 
+ 1246  kubectl logs exms-deployment-7865dcc9b7-mjlpg
+ 1247  kubectl get pods -n dev
+ 1248  kubectl logs admin-service-9f494855d-c2dhl
+ 1249  kubectl logs admin-service-9f494855d-c2dhl -n dev
+ 1250  kubectl get pods -n dev
+ 1251  kubectl logs landing-service-596fdff7b6-24w2m
+ 1252  kubectl logs landing-service-596fdff7b6-24w2m -n dev
+ 1253  kubectl get pods -n dev
+ 1254  kubectl logs admin-service-9f494855d-c2dhl   
+ 1255  kubectl logs admin-service-9f494855d-c2dhl -n dev   
+ 1256  git pods -n dev
+ 1257  kubectl get pods -n dev
+ 1258  kubectl logs landing-service-596fdff7b6-24w2m
+ 1259  kubectl logs landing-service-596fdff7b6-24w2m -n dev
+ 1260  kubectl get deployments
+ 1261  kubectl get pods
+ 1262  kubectl logs tms-deployment-6574c58468-496jq
+ 1263  kubectl logss
+ 1264  kubectl get pods
+ 1265  kubectl logs tms-deployment-6574c58468-kb6ss 
+ 1266  kubectl get pods
+ 1267  kubectl logs tms-deployment-6574c58468-kb6ss
+ 1268  kubectl get pods
+ 1269  kubectl get services
+ 1270  cd attpl-root/deployments/
+ 1271  vi deployment-tms.yml 
+ 1272  vi deployment-otp.yml 
+ 1273  vi deployment-exms.yml 
+ 1274  kubectl get pods
+ 1275  kubectl get pods cms-deployment-9f7877f5f-45hjp
+ 1276  vi deployment-otp.yml 
+ 1277  vi deployment-tms.yml 
+ 1278  kubectl apply -f deployment-tms.yml 
+ 1279  kubectl get pods
+ 1280  kubectl logs tms-deployment-6574c58468-kb6ss
+ 1281  vi deployment-tms.yml 
+ 1282  kubectl get pods
+ 1283  vi deployment-exms.yml 
+ 1284  kubectl get services
+ 1285  ll
+ 1286  history
+ 1287  ll
+ 1288  cd admin-landing/
+ 1289  cd nginx-ingress-services/
+ 1290  kubectl get pods
+ 1291  kubectl logs tms-deployment-6574c58468-kb6ss    
+ 1292  cd ..
+ 1293  vi deployment-tms.yml 
+ 1294  kubect apply -f deployment-tms.yml 
+ 1295  kubect apply -f deployment-tms 
+ 1296  kubectl apply -f deployment-tms.yml
+ 1297  kubectl get pods
+ 1298  kubectl logs tms-deployment-668956d849-hv4tl 
+ 1299  vi deployment-exms.yml 
+ 1300  kubectl apply -f deployment-exms.yml 
+ 1301  kubectl get pods
+ 1302  kubectl logs exms-deployment-7865dcc9b7-mjlpg
+ 1303  cd admin-landing/
+ 1304  cd nginx-ingress-services/
+ 1305  ll
+ 1306  kubectl get namespaces
+ 1307  kubectl get services -n nginx-ingress
+ 1308  kubectl get ingress
+ 1309  kubectl get ingress --all-namespaces
+ 1310  ll
+ 1311  cd ..
+ 1312  ll
+ 1313  vi backend-ingress.yml 
+ 1314  vi attpld-ingress.yml 
+ 1315  vi  service-ams-nginx.yml
+ 1316  vi  service-bms-nginx.yml
+ 1317  rm -rf  service-ams-nginx.yml
+ 1318  rm -rf  service-bms-nginx.yml
+ 1319  ll
+ 1320  cd nginx-ingress-services/
+ 1321  ll
+ 1322  vi service-ams-nginx.yml 
+ 1323  vi service-bms-nginx.yml 
+ 1324  cd ..
+ 1325  ll
+ 1326  cd ..
+ 1327  kubectl get deployments
+ 1328  kubectl get services
+ 1329  vi service-ams.yml 
+ 1330  ll
+ 1331  vi backend-ingress.yml 
+ 1332  kubectl apply -f backend-ingress.yml 
+ 1333  vi backend-ingress.yml 
+ 1334  vi backendd-ingress.yml
+ 1335  kubectl apply -f  vi backendd-ingress.yml
+ 1336  vi attpltestbackend-ingress.yml
+ 1337  kubectl apply -f attpltestbackend-ingress.yml
+ 1338  kubectl get ingress attpltestbackend-ingress
+ 1339  kubectl get services
+ 1340  kubectl get services service-ams -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+ 1341  kubectl get services -n nginx-ingress
+ 1342  kubectl get services service-ams -o=jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+ 1343  pwd
+ 1344  ll
+ 1345  cd attpl-root/
+ 1346  ll
+ 1347  cd deployments/
+ 1348  ll
+ 1349  git --version
+ 1350  cd admin-landing/
+ 1351  cd nginx-ingress-services/
+ 1352  git version
+ 1353  git config --global user.name "Deepak Teja"
+ 1354  git config --global user.email "mahalakshmideepak@gmail.com"
+ 1355  cd ~/attpl-root/deployments/admin-landing/nginx-ingress-services
+ 1356  git clone https://github.com/deepakteja143/attplroot.git
+ 1357  cd attplroot
+ 1358  ll
+ 1359  cd ..
+ 1360  cd nginx-ingress-services/
+ 1361  ll
+ 1362  cd ..
+ 1363  cd -
+ 1364  ll
+ 1365  cp *.yml ~/attpl-root/deployments/admin-landing/nginx-ingress-services/attplroot/
+ 1366  cd ~/attpl-root/deployments/admin-landing/nginx-ingress-services/attplroot
+ 1367  git add *.yml
+ 1368  git status
+ 1369  git commit -m "Updated YAML files for EKS configuration"
+ 1370  git push origin main
+ 1371  aws ec2 describe-key-pairs --query "KeyPairs[*].[KeyName]"
+ 1372  aws ec2 describe-key-pairs --key-names eks-setup --query "KeyPairs[*].[KeyName, KeyFingerprint, KeyMaterial]" --output text
+ 1373  aws ec2 describe-key-pairs --key-names eks-setup --query "KeyPairs[*].[KeyName, KeyFingerprint, KeyMaterial]" --output json
+ 1374  {     "Version": "2012-10-17",;     "Statement": [;         {             "Effect": "Allow",;             "Action": "ec2:DescribeKeyPairs",;             "Resource": "*";         };     ]; }
+ 1375  vi ssh.yml
+ 1376  aws ec2 describe-key-pairs --key-names eks-setup --query "KeyPairs[*].[KeyName, KeyFingerprint, KeyMaterial]" --output json
+ 1377  eks-setup  9b:1c:2d:3e:4f:5g:6h:7i:8j:9k:0l:1m:2n:3o:4p:5q:6r:7s:8t:9u:0v:1w:2x:3y:4z ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAv3J6Q0gGt8Rf0Y21P0+Mm4K+Z+8NjKPaVpQg3nUk2+5T+fzhYczJ1hjz11Aik7Z0ZXZxhK5TrZI3LcFZM8t9DC4aCG5oRfn/mhSvS9xRyOIZrZJbDN1P1mMtH20zbfV74Yy12B/WQ6zVAb6W0BVoqSXb3DltUWvJiDsgfJlQ4g5UdQ1hxHbTtUSYqJL26dYcG6hHt99xqLcD5H+Br6u/PcOJFqZwBlDg4lXUjMRUIumA2F8r8pGSS3hHnvqyQGLux/3ryIzSDfQxENj5A3EzB5DKpEV7oXr+6/Qa/TlLxZSHJLtbyJsm8R/nFjvMftA+e6aoc6rU4Ugw==
+ 1378  cd attpl-root/deployments/admin-landing/nginx-ingress-services/
+ 1379  export GITHUB_PAT="***"
+ 1380  git config --global credential.https://github.com.password "$GITHUB_PAT"
+ 1381  cd ..
+ 1382  vi exampleworkflow.yml
+ 1383  vi exampl1eworkflow.yml
+ 1384  vi exampleworkflow.yml
+ 1385  vi exampl1eworkflow.yml
+ 1386  git clone https://github.com/deepakteja143/attplroot.git
+ 1387  git status
+ 1388  cd admin-landing/
+ 1389  cd nginx-ingress-services/
+ 1390  git status
+ 1391  git add *.yml
+ 1392  .git
+ 1393  cp /home/ubuntu/yaml-files/*.yml /home/ubuntu/git-repo
+ 1394  cd /home/ubuntu/attpl-root/deployments/admin-landing/nginx-ingress-services
+ 1395  cd ~/attpl-root/deployments/admin-landing/nginx-ingress-services/attplroot/
+ 1396  git add *.yml
+ 1397  git status
+ 1398  git commit -m "Updated YAML files for EKS configuration"
+ 1399  git push origin main
+ 1400  ll
+ 1401  cd ..
+ 1402  ll
+ 1403  cd ..
+ 1404  ll
+ 1405  vi attpld-ingress.yml 
+ 1406  cd ~/attpl-root/deployments/admin-landing
+ 1407  git add attpld-ingress.yml
+ 1408  .git
+ 1409  cd nginx-ingress-services/
+ 1410  cd attplroot/
+ 1411  git add attpld-ingress.yml
+ 1412  ll
+ 1413  cd ..
+ 1414  cd attplroot/
+ 1415  ll
+ 1416  cd ..
+ 1417  ll
+ 1418  cd ..
+ 1419  ll
+ 1420  nginx-ingress-services/
+ 1421  cd nginx-ingress-services/
+ 1422  cd attplroot/
+ 1423  history
+ 1424  cd attpl-root/
+ 1425  ll
+ 1426  cd deployments/
+ 1427  ll
+ 1428  cd admin-landing/
+ 1429  cd nginx-ingress-services/
+ 1430  ll
+ 1431  cd attplroot/
+ 1432  ll
+ 1433  cd ..
+ 1434  rm -rf service-ams-nginx.yml 
+ 1435  rm -rf service-bms-nginx.yml 
+ 1436  kubectl get services -n nginx-ingress
+ 1437  ll
+ 1438  rm -rf service-cms-nginx.yml 
+ 1439  rm -rf service-ems-nginx.yml 
+ 1440  rm -rf service-exms-nginx.yml 
+ 1441  rm -rf service-pms-nginx.yml 
+ 1442  rm -rf service-sms-nginx.yml 
+ 1443  rm -rf service-tms-nginx.yml 
+ 1444  rm -rf service-ums-nginx.yml 
+ 1445  rm -rf service-vms-nginx.yml 
+ 1446  rm -rf service-otp-nginx.yml 
+ 1447  ll
+ 1448  cd ..
+ 1449  ll
+ 1450  rm -ri nginx-ingress-services
+ 1451  ll
+ 1452  cd nginx-ingress-services/
+ 1453  ll
+ 1454  cd ..
+ 1455  rm -rf nginx-ingress-services/
+ 1456  ll
+ 1457  cd ..
+ 1458  ll
+ 1459  cd admin-landing/
+ 1460  ll
+ 1461  git status
+ 1462  cd attplroot
+ 1463  cd ..
+ 1464  ll
+ 1465  cd attplroot/
+ 1466  git init
+ 1467  .git/
+ 1468  cd ..
+ 1469  cd admin-landing/
+ 1470  ll
+ 1471  vi attpld-ingress.yml 
+ 1472  cd attplroot
+ 1473  cd ..
+ 1474  cd attplroot/
+ 1475  ll
+ 1476  ls
+ 1477  vi README.md 
+ 1478  git add .
+ 1479  git commit -m "Add all configuration files for the project"
+ 1480  git remote add origin https://github.com/deepakteja143/attplroot.git
+ 1481  ll
+ 1482  cd .. 
+ 1483  cd admin-landing/
+ 1484  ll
+ 1485  cd /home/ubuntu/attpl-root/deployments/admin-landing
+ 1486  git add admin-service-deployment.yml admin-service-service.yml alb-ingress-controller-iam-policy.json attpld-ingress.yml backend-ingress.yml cert.pem key.pem landing-service-deployment.yml landing-service-service.yml
+ 1487  cd /home/ubuntu/attpl-root/deployments/admin-landing
+ 1488  git init
+ 1489  git add admin-service-deployment.yml admin-service-service.yml alb-ingress-controller-iam-policy.json attpld-ingress.yml backend-ingress.yml cert.pem key.pem landing-service-deployment.yml landing-service-service.yml
+ 1490  git commit -m "Add all configuration files for the project"
+ 1491  git remote add origin https://github.com/deepakteja143/attplroot.git
+ 1492  git push origin main
+ 1493  git branch
+ 1494  git checkout -b admin-landing
+ 1495  git checkout admin-landing
+ 1496  git pull origin master
+ 1497  git clone https://github.com/deepakteja143/attplroot.git
+ 1498  ls
+ 1499  cd ~/attpl-root/deployments/admin-landing
+ 1500  git add .
+ 1501  git commit -m "Added admin service deployment, service, ingress policies, and certificates"
+ 1502  git remote add origin https://github.com/deepakteja143/attplroot.git
+ 1503  git push origin main
+ 1504  git push origin master
+ 1505  ls
+ 1506  git checkout master
+ 1507  git pull origin master
+ 1508  git checkout -b admin-landing
+ 1509  git add admin-service-deployment.yml admin-service-service.yml alb-ingress-controller-iam-policy.json attpld-ingress.yml backend-ingress.yml cert.pem key.pem landing-service-deployment.yml landing-service-service.yml
+ 1510  git commit -m "Add admin-landing files"
+ 1511  git status
+ 1512  git add /home/ubuntu/attpl-root/deployments/admin-landing/attplroot/
+ 1513  git add attplroot/
+ 1514  git rm --cached attplroot
+ 1515  git rm -f --cached attplroot
+ 1516  git add attplroot/
+ 1517  git commit -m "Remove attplroot from index"
+ 1518  git push origin master
+ 1519  git checkout admin-landing
+ 1520  ls
+ 1521  git add admin-service-deployment.yml  alb-ingress-controller-iam-policy.json  attplroot            cert.pem  landing-service-deployment.yml
+ 1522  admin-service-service.yml     attpld-ingress.yml                      backend-ingress.yml  key.pem   landing-service-service.yml
+ 1523  git add admin-service-deployment.yml admin-service-service.yml alb-ingress-controller-iam-policy.json attpld-ingress.yml backend-ingress.yml cert.pem key.pem landing-service-deployment.yml landing-service-service.yml
+ 1524  git commit -m "Added configuration files for admin service deployment"
+ 1525  git push origin admin-landing
+ 1526  ls
+ 1527  vi attpld-ingress.yml 
+ 1528  rm -rf attpld-ingress.yml 
+ 1529  ls
+ 1530  vi backend-ingress.yml 
+ 1531  rm -rf backend-ingress.yml 
+ 1532  ll
+ 1533  cd attplroot/
+ 1534  ls
+ 1535  cd ..
+ 1536  ls
+ 1537  cd ..
+ 1538  ls
+ 1539  cd ~/attpl-root/deployments
+ 1540  git init
+ 1541  git add .
+ 1542  git commit -m "all backend services deployment and services files with ingress files"
+ 1543  git remote add origin https://github.com/deepakteja143/attplroot.git
+ 1544  git push origin master
+ 1545  git pull origin master
+ 1546  git pull origin master --no-rebase  # To explicitly merge without rebasing
+ 1547  git pull origin master --rebase     # To rebase your changes on top of the remote branch
+ 1548  git init
+ 1549  ls
+ 1550  git clone https://github.com/deepakteja143/attpl-backend-services.git
+ 1551  git add .
+ 1552  git commit -m all attpl backend services
+ 1553  git commit -m "all attpl backend services"
+ 1554  git origin main
+ 1555  git origin master
+ 1556  git push origin main
+ 1557  git branch
+ 1558  ls
+ 1559  git init
+ 1560  git add .
+ 1561  git commit -m "backend services"
+ 1562  git commit -m "initial commit"
+ 1563  git status
+ 1564  git add admin-landing
+ 1565  git rebase --continue
+ 1566  git push origin master
+ 1567  Username for 'https://github.com': deepakteja143
+ 1568  Password for 'https://deepakteja143@github.com':
+ 1569  git push origin main
+ 1570  git push origin master
+ 1571  git push origin main
+ 1572  git push origin master
+ 1573  git branch
+ 1574  git add exampleworkflow.yml
+ 1575  ubuntu@ip-172-31-11-204:~/attpl-root/deployments$ git add admin-landing
+ 1576  git status
+ 1577  git add .
+ 1578  git status
+ 1579  git add -A
+ 1580  git status
+ 1581  git commit -m "Update admin-landing modifications"
+ 1582  .gitignore
+ 1583  git add -A
+ 1584  git commit -m "Update admin-landing modifications"
+ 1585  git push origin main
+ 1586  git push origin master
+ 1587  vi exampl1eworkflow.yml
+ 1588  git status
+ 1589  vi exampl1eworkflow.yml
+ 1590  git add exampleworkflow.yml
+ 1591  git add exampl1eworkflow.yml
+ 1592  git commit -m "Removed sensitive information from examplleworkflow.yml"
+ 1593  git push origin main
+ 1594  vi examplleworkflow.yml
+ 1595  rm -rf examplleworkflow.yml
+ 1596  ll
+ 1597  vi  exampl1eworkflow.yml
+ 1598  vi exampleworkflow.yml
+ 1599  rm -rf exampleworkflow.yml 
+ 1600  ll
+ 1601  ls
+ 1602  git add  exampl1eworkflow.yml
+ 1603  git commit -m "Removed sensitive information from examplleworkflow.yml"
+ 1604  git add admin-landing
+ 1605  git commit -m "Removed sensitive information from exampleworkflow.yml and updated admin-landing"
+ 1606  git add exampleworkflow.yml admin-landing
+ 1607  vi  exampl1eworkflow.yml
+ 1608  git add exampleworkflow.yml admin-landing
+ 1609  git add exampl1eworkflow.yml admin-landing
+ 1610  git commit -m "Removed sensitive information from exampl1eworkflow.yml and updated admin-landing"
+ 1611  git push origin main
+ 1612  git checkout -b main
+ 1613  git add .
+ 1614  git commit -m "Your commit message"
+ 1615  git push origin main
+ 1616  git add attplroot
+ 1617  git add .
+ 1618  git commit -m "Updated deployments with sensitive information removed"
+ 1619  git add .
+ 1620  git commit -m "Updated attpl-root/deployments with sensitive information removed"
+ 1621  git commit -m "Updated attpl-rootdeployments with sensitive information removed"
+ 1622  git commit -m "Updated attpl-root deployments with sensitive information removed"
+ 1623  ubuntu@ip-172-31-11-204:~/attpl-root/deployments$ git push origin main
+ 1624  ls
+ 1625  cd admin-landing/
+ 1626  cd ng
+ 1627  cd attplroot/
+ 1628  git add.
+ 1629  ls
+ 1630  cd ..
+ 1631  ll
+ 1632  git add.
+ 1633  git add .
+ 1634  cd attplroot/
+ 1635  git add .
+ 1636  git commit -m "Updated attpl-root deployments with sensitive information removed"
+ 1637  git status
+ 1638  git add .
+ 1639  git commit -m "Your commit message"
+ 1640  git push origin main
+ 1641  cd ..
+ 1642  cd attplroot/
+ 1643  git add .
+ 1644  git commit -m "Your commit message"
+ 1645  git push origin main
+ 1646  git pull origin main
+ 1647  git add .
+ 1648  git commit -m "Merge branch 'main' of https://github.com/deepakteja143/attplroot.git"
+ 1649  git push origin main
+ 1650  git clone https://github.com/deepakteja143/attpl-deployments.git
+ 1651  cd attpl-deployments
+ 1652  git push origin main
+ 1653  ls
+ 1654  git add ..
+ 1655  cd ..
+ 1656  ll
+ 1657  cd ..
+ 1658  ll
+ 1659  cd attpl-root/
+ 1660  ls
+ 1661  cd attpl-root/
+ 1662  ls
+ 1663  cd ..
+ 1664  cd attpl-root/
+ 1665  ll
+ 1666  cd deployments/
+ 1667  ll
+ 1668  cd admin-landing/
+ 1669  ll
+ 1670  kubectl cluster-info
+ 1671  cd ..
+ 1672  kubectl cluster-info
+ 1673  cd ..
+ 1674  kubectl cluster-info
+ 1675  kubectl get nodes
+ 1676  cd attpl-root/
+ 1677  ll
+ 1678  cd deployments/
+ 1679  ll
+ 1680  vi attpltestbackend-ingress.yml 
+ 1681  vi backendd-ingress.yml
+ 1682  git init
+ 1683  git add .
+ 1684  git add  backendd-ingress.yml  backend-ingress.yml
+ 1685  git commit -m "backend ingress files are move in github"
+ 1686  kubectl get services
+ 1687  kubectl get nodes
+ 1688  ll
+ 1689  vi service-otp.yml 
+ 1690  kubectl get nodes
+ 1691  kubectl get pods
+ 1692  kubectl get namespaces
+ 1693  kubectl create namespaces
+ 1694  history
+ 1695  kubectl get services
+ 1696  kubectl create namespace test
+ 1697  kubectl get namespaces
+ 1698  kubectl get services -n dev
+ 1699  kubectl get services -n prod
+ 1700  kubectl get services -n test
+ 1701  kubectl get services
+ 1702  cd attpl-root/
+ 1703  cd deployments/
+ 1704  vi deployment-otp.yml 
+ 1705  cd admin-landing/
+ 1706  ls
+ 1707  vi admin-service-deployment.yml 
+ 1708  cd ..
+ 1709  ls
+ 1710  vi attpltestbackend-ingress.yml  
+ 1711  kubectl get services
+ 1712  ls
+ 1713  vi backend-ingress.yml 
+ 1714  history
+ 1715  cd attpl-root/
+ 1716  cd deployments/
+ 1717  kubectl get services
+ 1718  kubectl get services -n dev
+ 1719  ls
+ 1720  vi attpltestbackend-ingress.yml 
+ 1721  vi attpl-backend-services/
+ 1722  vi attpltestbackend-ingress.yml 
+ 1723  kubectl apply -f attpltestbackend-ingress.yml 
+ 1724  vi attpltestbackend-ingress.yml 
+ 1725  kubectl get services
+ 1726  kubectl get services -n nginx-ingress
+ 1727  kubectl describe service nginx-ingress-controller
+ 1728  kubectl get services
+ 1729  kubectl get services -n default
+ 1730  kubectl get services --all-namespaces
+ 1731  cd attpl-root/
+ 1732  kubectl get deployments
+ 1733  kubectl get deployments -n dev
+ 1734  kubectl get pods
+ 1735  kubectl get pods -n dev
+ 1736  kubectl get services
+ 1737  kubectl get services -n dev
+ 1738  cd attpl-root/
+ 1739  cd deployments/
+ 1740  cd admin-landing/
+ 1741  kubectl get ingress
+ 1742  ls
+ 1743  cd attpl-root/deployments/admin-landing/
+ 1744  kubectl get ingress -n nginx-ingress
+ 1745  cd attpl-root/deployments/
+ 1746  ll
+ 1747  vi attpltestbackend-ingress.yml
+ 1748  ll
+ 1749  vi backend-ingress.yml 
+ 1750  rm -rf  backend-ingress.yml
+ 1751  rm -rf ll
+ 1752  ll
+ 1753  vi backendd-ingress.yml
+ 1754  vi  attpltestbackend-ingress.yml
+ 1755  rm -rf backendd-ingress.yml
+ 1756  ll
+ 1757  vi  otp-ingress.yml
+ 1758  rm -rf otp-ingress.yml
+ 1759  rm -rf otp-service-ingress.yml
+ 1760  ll
+ 1761  vi  exms-ingress.yml
+ 1762  rm -rf exms-ingress.yml
+ 1763  ll
+ 1764  rm -rf ams-ingress.yml
+ 1765  ll
+ 1766  rm -rf ems-ingress.yml
+ 1767  ll
+ 1768  rm -rf  pms-ingress.yml
+ 1769  ll
+ 1770  vi attpld-ingress.yml
+ 1771  cd attpl-root/deployments/
+ 1772  ll
+ 1773  rm -rf  ums-ingress.yml
+ 1774  ll
+ 1775  rm -rf vms-ingress.yml
+ 1776  ll
+ 1777  rm -rf tms-ingress.yml
+ 1778  ll
+ 1779  vi attpl-backend-services/
+ 1780  rm -rf contact-management-ingress.yml
+ 1781  ll
+ 1782  rm -rf attplems-ingress.yml
+ 1783  ll
+ 1784  vi attpld-ingress.yml
+ 1785  rm -rf  attpld-ingress.yml
+ 1786  ll
+ 1787  rm -rf sms-ingress.yml
+ 1788  ll
+ 1789  vi attpl-backend-service.yml
+ 1790  ll
+ 1791  cd attpl-backend-services/
+ 1792  ll
+ 1793  cd ..
+ 1794  rm -rf cms-ingress.yml
+ 1795  ll
+ 1796  rm -rf bms-ingress.yml
+ 1797  ll
+ 1798  vi attpltestbackend-ingress.yml
+ 1799  kubectl apply -f attpltestbackend-ingress.yml -n default
+ 1800  kubectl apply -f attpltestbackend-ingress.yml 
+ 1801  ls
+ 1802  nslookup apptest.attplems.com
+ 1803  aws elb describe-load-balancers
+ 1804  q!
+ 1805  kubectl get pods
+ 1806  kubetctl get services
+ 1807  kubectl get services
+ 1808  kubectl get services -n nginx-ingress
+ 1809  kubectl get svc -n nginx-ingress
+ 1810  kubectl get svc -n default
+ 1811  kubectl get nginx
+ 1812  kubectl get deployments -n nginx-ingress
+ 1813  kubectl get svc -n nginx-ingress
+ 1814  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/aws/deploy.yaml
+ 1815  kubectl get pods -n ingress-nginx
+ 1816  kubectl get pods nginx-ingress
+ 1817  kubectl get pods -n default
+ 1818  kubectl get pods -n nginx-ingress
+ 1819  kubectl get pods -n ingress-nginx
+ 1820  kubectl get pods -n default
+ 1821  kubectl get services
+ 1822  cd attpl-root/deployments/
+ 1823  kubectl get pods
+ 1824  kubectl get services
+ 1825  kubectl get services -n nginx
+ 1826  kubectl get services -n nginx-ingress
+ 1827  ll
+ 1828  vi attpltestbackend-ingress.yml
+ 1829  kubectl apply -f attpltestbackend-ingress.yml
+ 1830  kubectl get services -n default
+ 1831  kubectl get ingress -n default
+ 1832  kubectl get pods --namespace kube-system
+ 1833  ll
+ 1834  vi attpltestbackend-ingress.yml
+ 1835  kubectl apply -f  attpltestbackend-ingress.yml
+ 1836  kubectl get ingress -n default
+ 1837  kubectl get pods -n nginx-ingress
+ 1838  kubectl get pods -n default
+ 1839  kubectl get pods -n nginx-ingress
+ 1840  kubectl logs nginx-ingress-ingress-nginx-controller-6bf8cf85ff-76bj8  -n nginx-ingress
+ 1841  kubectl get deployments
+ 1842  kubectl get namespaces
+ 1843  kubectl get ingress-nginx
+ 1844  kubectl get deployments -n nginx-ingress
+ 1845  kubectl get info
+ 1846  kubectl get info -f
+ 1847  kubectl cluster-info
+ 1848  kubectl get deployment -A
+ 1849  kubectl get ing -A
+ 1850  kubectl get svc -A
+ 1851  kubectl get ing -A
+ 1852  helm list -n ingress-nginx
+ 1853  kubectl get deployment -n ingress-nginx
+ 1854  kubectl get svc -n ingress-nginx
+ 1855  kubectl get svc -A
+ 1856  kubectl get svc -n dev
+ 1857  kubectl get pods -n nginx-ingress
+ 1858  kubectl logs nginx-ingress-ingress-nginx-controller-6bf8cf85ff-76bj8
+ 1859  kubectl logs nginx-ingress-ingress-nginx-controller-6bf8cf85ff-76bj8 -n nginx-ingress
+ 1860  kubectl get svc
+ 1861  kubectl get svc -n nginx-ingress
+ 1862  kubectl delete service service-ams-nginx 
+ 1863  kubectl delete service service-ams-nginx
+ 1864  kubectl delete service service-ams-nginx --namespace=nginx-ingress
+ 1865  kubectl delete service service-bms-nginx --namespace=nginx-ingress
+ 1866  kubectl delete service service-cms-nginx --namespace=nginx-ingress
+ 1867  kubectl delete service service-ems-nginx --namespace=nginx-ingress
+ 1868  kubectl delete service service-exms-nginx --namespace=nginx-ingress
+ 1869  kubectl delete service service-otp-nginx --namespace=nginx-ingress
+ 1870  kubectl delete service service-pms-nginx --namespace=nginx-ingress
+ 1871  kubectl delete service service-sms-nginx --namespace=nginx-ingress
+ 1872  kubectl delete service service-tms-nginx --namespace=nginx-ingress
+ 1873  kubectl delete service service-ums-nginx --namespace=nginx-ingress
+ 1874  kubectl delete service service-vms-nginx --namespace=nginx-ingress
+ 1875  ll
+ 1876  kubectl get services
+ 1877  history
+ 1878  cd attpl-root/
+ 1879  kubectl get svc service-ams -n default
+ 1880  curl http:// 10.100.126.65:80 
+ 1881  curl http://ada4427fceb6142488b14a2412ddb775-1520193657.ap-south-1.elb.amazonaws.com:8091
+ 1882  cd ..
+ 1883  kubectl get services
+ 1884  ll
+ 1885  cd attpl-root/
+ 1886  ll
+ 1887  cd deployments/
+ 1888  ll
+ 1889  kubectl get pods
+ 1890  kubectl get services
+ 1891  nslookup
+ 1892  cd attpl-root/
+ 1893  cd deployments/
+ 1894  ll
+ 1895  vi service-ams.yml 
+ 1896  kubectl apply -f service-ams.yml
+ 1897  vi service-ams.yml 
+ 1898  kubectl apply -f service-ams.yml
+ 1899  vi service-ams.yml 
+ 1900  kubectl apply -f service-ams.yml
+ 1901  vi service-ams.yml 
+ 1902  kubectl apply -f service-ams.yml -n default
+ 1903  vi service-ams.yml 
+ 1904  kubectl apply -f service-ams.yml
+ 1905  ll
+ 1906  vi service-ams.yml
+ 1907  kubectl apply -f service-ams.yml 
+ 1908  kubectl apply -f service-ams.yml
+ 1909  cd attpl-root/deployments/
+ 1910  kubectl get ingress
+ 1911  kubectl describe ingress  apptest.attplems.com
+ 1912  kubectl describe ingress backend-ingress
+ 1913  kubectl get service
+ 1914  kubectl describe service service-ams 
+ 1915  vi service-ams.yml 
+ 1916  ls -d*/
+ 1917  ls d*/
+ 1918  cd attpl-root/deployments/
+ 1919  cd admin-landing/
+ 1920  ls d*/
+ 1921  ls
+ 1922  cd ..
+ 1923  kubectl get services
+ 1924  kubectl get deployments
+ 1925  ll
+ 1926  vi service-ams.yml
+ 1927  vi service-otp.yml 
+ 1928  vi service-bms.yml 
+ 1929  vi service-ams.yml
+ 1930  kubectl apply -f  service-ams.yml
+ 1931  vi service-otp.yml 
+ 1932  vi service-bms.yml 
+ 1933  vi service-ams.yml
+ 1934  vi service-bms.yml 
+ 1935  vi service-otp.yml 
+ 1936  vi service-ams.yml
+ 1937  vi service-otp.yml 
+ 1938  vi service-ams.yml
+ 1939  kubectl apply -f service-ams.yml 
+ 1940  kubectl get services
+ 1941  kubectl get pods -n ingress-nginx
+ 1942  kubectl get namespaces
+ 1943  kubectl get pods nginx-ingress
+ 1944  kubectl get pods -n nginx-ingress
+ 1945  kubectl get pods -n ingress-nginx
+ 1946  kubectl get ingressclass
+ 1947  kubectl get pods -n ingress-nginx
+ 1948  kubectl get pods
+ 1949  kubectl get pods -n nginx-ingress
+ 1950  kubectl get service -n nginx-ingress
+ 1951  cd attpl-root/deployments/
+ 1952  ls
+ 1953  vi attpltestbackend-ingress.yml 
+ 1954  ls
+ 1955  vi ums-deployment.yml 
+ 1956  vi attpltestbackend-ingress.yml 
+ 1957  kubectl apply -f attpltestbackend-ingress.yml 
+ 1958  vi ums-deployment.yml 
+ 1959  vi attpltestbackend-ingress.yml 
+ 1960  vi ums-deployment.yml
+ 1961  kubectl apply -f ums-deployment.yml 
+ 1962  vi ums-service.yml 
+ 1963  kubectl apply -f ums-service.yml 
+ 1964  vi attpltestbackend-ingress.yml 
+ 1965  kubectl apply -f attpltestbackend-ingress.yml 
+ 1966  vi ums-service.yml 
+ 1967  kubectl apply -f ums-service.yml 
+ 1968  kubectl apply -f attpltestbackend-ingress.yml 
+ 1969  vi attpltestbackend-ingress.yml 
+ 1970  kubectl apply -f ums-service.yml 
+ 1971  kubectl get service
+ 1972  kubectl get service -n nginx-ingres
+ 1973  kubectl get service -n nginx-ingrees
+ 1974  kubectl get service -n nginx-ingress
+ 1975  kubectl get service -n ingress-nginx
+ 1976  kubctl get pods -n nginx-ingress
+ 1977  kubectl get pods -n nginx-ingress
+ 1978  kubectl logs nginx-ingress-ingress-nginx-controller-6bf8cf85ff-76bj8
+ 1979  kubectl logs nginx-ingress-ingress-nginx-controller-6bf8cf85ff-76bj8 -n nginx-ingress
+ 1980  cd attpl-root/deployments/
+ 1981  kubectl get services -n nginx-ingress
+ 1982  kubectl get services -n ingress-nginx
+ 1983  kubectl get services -n nginx-ingress
+ 1984  kubectl get pods -n nginx-ingress
+ 1985  kubectl logs nginx-ingress-ingress-nginx-controller-6bf8cf85ff-76bj8 -n nginx-ingress
+ 1986  kubectl get pods
+ 1987  kubectl get pods --all-namespaces
+ 1988  kubectl get service --all-namespaces
+ 1989  cd ./attpl-root/deployments/
+ 1990  vi ums-deployment.yml 
+ 1991  vi ums-service.yml 
+ 1992  kubectl apply -f ums-service.yml
+ 1993  vi attpltestbackend-ingress.yml 
+ 1994  kubectl get pods -n nginx-ingress
+ 1995  kubectl get service -n nginx-ingress
+ 1996  kubectl get service -n ingress-nginx
+ 1997  kubectl get service --all-namespaces
+ 1998  vi ums-deployment.yml 
+ 1999  history
+ubuntu@ip-172-31-11-204:~$ 
